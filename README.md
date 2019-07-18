@@ -12,7 +12,14 @@ Set desired MySQL user details in **.env** and  search for **Connection info:** 
 
 ```
 docker-compose up -d
+docker exec -it docker-radius-mysql_db_1 mysql -uradius -p radius -e 'insert into radcheck (username,attribute,op,value) values("fredf", "Cleartext-Password", ":=", "wilma");'
+test with radtest if configured successfully
+
+docker exec -it docker-radius-mysql_db mysql -uradius -p radius -e 'insert into radcheck (username,attribute,op,value) values("fredf", "Cleartext-Password", ":=", "wilma");'
 ```
+
+
+
 ## Todos
 *	Use of environment variables in **sql** file instead static
 
