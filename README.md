@@ -18,6 +18,9 @@ test with radtest if configured successfully
 docker exec -it docker-radius-mysql_radius_1 radtest fredf wilma localhost testing123
 
 ```
+
+
+
 ## Todos
 *	Use of environment variables in **sql** file instead static
 
